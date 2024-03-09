@@ -1,9 +1,8 @@
+* {
+  font-size: 13px;
+}
 .data_card {
   border: none !important;
   border-radius: 20px !important;
   background-color: #f4f5f7 !important;
-}
-
-* {
-  font-size: 13px;
 }

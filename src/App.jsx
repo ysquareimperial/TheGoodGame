@@ -30,6 +30,9 @@ function App() {
   }, []);
   return (
     <>
+      <h2 style={{ fontWeight: "bold" }} className="text-center mt-5 mb-5">
+        TheGoodGame Assessment | Yasir Ado Hassan
+      </h2>
       {loading ? (
         <div
           class="text-center mt-5 d-flex align-items-center justify-content-center gap-2"
@@ -47,7 +50,7 @@ function App() {
           <Masonry>
             {data_?.map((item, index) => (
               <Card
-                className="data_card p-3 mb-3"
+                className="data_card p-3 m-3"
                 style={{
                   width: "18rem",
                 }}
@@ -67,10 +70,11 @@ function App() {
                     {item.description}
                   </CardText>
                   <p
-                    className="text-primary curs"
+                    className="text-primary"
+                    style={{ cursor: "pointer" }}
                     onClick={() => handleShow(item.id)}
                   >
-                    <b>Show more</b>
+                    {show[item.id] ? <b>Show less</b> : <b>Show more</b>}
                   </p>
                   {show[item.id] && (
                     <div>
